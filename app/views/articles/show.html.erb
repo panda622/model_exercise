@@ -1,0 +1,11 @@
+<h1>Article Show</h1>
+<h3>ID: <%= @article.id %></h3>
+<p>Title: <%= @article.title %></p>
+<p>Likes: <%= @article.like %></p>
+<hr>
+<h1>Article Content</h1>
+<% @pictures.each do |p| %>
+  <% @texts.each do |p| %>
+    <%= image_tag p.image.url %>
+  <% end %>
+<% end %>

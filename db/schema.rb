@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_132213) do
+ActiveRecord::Schema.define(version: 2018_08_07_151641) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.integer "like", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -22,6 +24,10 @@ ActiveRecord::Schema.define(version: 2018_08_07_132213) do
     t.integer "like", default: 0
     t.integer "position"
     t.integer "article_id"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["article_id"], name: "index_pictures_on_article_id"
   end
 

@@ -3,6 +3,8 @@ class CreateArticles < ActiveRecord::Migration[5.2]
     create_table :articles do |t|
       t.string :title
       t.integer :like, default: 0
+
+      t.timestamps
     end
   end
 end

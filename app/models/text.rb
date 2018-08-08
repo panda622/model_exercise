@@ -13,4 +13,8 @@ class Text < ApplicationRecord
     p = p1 > p2 ? p1 : p2
     self.position = p + 1
   end
+
+  scope :get_sentences,  -> (article_id) { where('article_id = ?', article_id) }
+ 
+
 end
