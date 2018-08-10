@@ -10,7 +10,7 @@ Article.delete_all
 Text.delete_all
 Picture.delete_all
 10.times do |a|
-  article = Article.create!(title: Faker::Artist.name)
+  article = Article.create!(title: Faker::Artist.name, published_time: Time.now)
   5.times do |x|
     text = Text.create!(article: article, headline: Faker::Company.name, content: Faker::OnePiece.quote)
     picture = Picture.create!(article: article, headline: Faker::Company.name)

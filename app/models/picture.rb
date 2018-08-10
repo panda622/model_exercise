@@ -1,6 +1,8 @@
 require "open-uri"
 
 class Picture < ApplicationRecord
+  validates :headline, presence: true
+
   belongs_to :article, optional: true
   default_scope { order('position') }
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
