@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render '/layouts/sidebar' %>
+    <div id="main">
+      <%= yield %>
+    </div>
   </body>
 </html>

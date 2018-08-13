@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "paperclip", "~> 6.0.0"
 gem 'enumerize'
+gem 'rspec'
 
 
 group :development, :test do
