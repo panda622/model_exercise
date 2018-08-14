@@ -6,7 +6,4 @@ class ApplicationRecord < ActiveRecord::Base
     self.save
   end
 
-  def like
-    self.like
-  end
 end
